@@ -20,7 +20,7 @@ function Dashboard() {
 
   useEffect(() => {
     // Backend nundi AI Risk Data techukuntunnam
-    axios.get("http://localhost:5000/api/data/insights")
+    axios.get("https://mini-erp-backend-ji04.onrender.com/api/data/insights")
       .then((res) => setProjects(res.data))
       .catch((err) => console.error("Error fetching data:", err));
   }, []);

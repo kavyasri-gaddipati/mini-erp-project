@@ -19,7 +19,7 @@ function Finance() {
 
   const fetchProjects = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/data/projects");
+      const res = await axios.get("https://mini-erp-backend-ji04.onrender.com/api/data/projects");
       setProjects(res.data);
     } catch (err) {
       console.error(err);
@@ -32,7 +32,7 @@ function Finance() {
     if (!selectedProject || !invoiceAmount) return alert("Please select project and amount");
 
     try {
-      await axios.post("http://localhost:5000/api/data/invoices", {
+      await axios.post("https://mini-erp-backend-ji04.onrender.com/api/data/invoices", {
         project_id: selectedProject,
         amount: invoiceAmount,
       });
@@ -49,7 +49,7 @@ function Finance() {
   const handleCreateProject = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/data/projects", {
+      await axios.post("https://mini-erp-backend-ji04.onrender.com/api/data/projects", {
         name: newProjectName,
         budget: newProjectBudget,
         start_date: "2023-01-01", // Dummy dates for now

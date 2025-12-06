@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault(); // Page refresh avvakunda aputhundi
     try {
       // Backend ki Username/Password pampistunnam
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("https://mini-erp-backend-ji04.onrender.com/api/auth/login", {
         username,
         password,
       });
